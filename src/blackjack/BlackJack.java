@@ -18,5 +18,7 @@ public class BlackJack {
         // TODO code application logic here
         boolean prueba = true;
     }
+    //si funciono!!!
+    
     
 }
