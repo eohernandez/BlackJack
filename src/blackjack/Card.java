@@ -14,9 +14,9 @@ public class Card{
             return value;
 	}
 	public void setSuite(char c){
-
+            suite = c;
 	}
 	public void setValue(char c){
-		
+            value = c;
 	}
 }
