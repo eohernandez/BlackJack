@@ -22,17 +22,18 @@ public class BlackJack {
     public static void main(String[] args) {
         // TODO code application logic here
         int option;
+        Game game = new Game();
         
         do
         {
             option = menu();
             switch (option)
             {
-                case 1: deal();
+                case 1: game.deal();
                     break;
-                case 2: hit();
+                case 2: game.hit();
                     break;
-                case 3: stand();
+                case 3: game.stand();
                     break;
                 case 4: System.out.println("Gracias por jugar!");
                     break;
@@ -54,20 +55,5 @@ public class BlackJack {
         option = in.nextInt();
                 
         return option;
-    }
-    
-    public static void deal()
-    {
-        
-    }
-    
-    public static void hit()
-    {
-        
-    }
-    
-    public static void stand()
-    {
-        
     }
 }
