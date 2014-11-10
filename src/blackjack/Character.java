@@ -1,7 +1,10 @@
 package blackjack;
 public class Character{
 
-	private Hand hand;
+    private Hand hand;
         
-
+    public Character()
+    {
+        Hand hand = new Hand();
+    }
 }

@@ -12,11 +12,9 @@ public class Card{
         }
         
 	public char getSuite(){
-
             return suite;
 	}
 	public char getValue(){
-     
             return value;
 	}
 	public void setSuite(char c){
