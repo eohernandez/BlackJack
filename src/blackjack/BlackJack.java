@@ -26,6 +26,19 @@ public class BlackJack {
         do
         {
             option = menu();
+            switch (option)
+            {
+                case 1: deal();
+                    break;
+                case 2: hit();
+                    break;
+                case 3: stand();
+                    break;
+                case 4: System.out.println("Gracias por jugar!");
+                    break;
+                default: System.out.println("Opcion incorrecta!");
+                    break;                    
+            }
         }while(option != 4);
     }
    
@@ -42,5 +55,19 @@ public class BlackJack {
                 
         return option;
     }
-
+    
+    public static void deal()
+    {
+        
+    }
+    
+    public static void hit()
+    {
+        
+    }
+    
+    public static void stand()
+    {
+        
+    }
 }
