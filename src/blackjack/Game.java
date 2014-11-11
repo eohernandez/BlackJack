@@ -94,10 +94,6 @@ public class Game
 
     }
 
-    public void newGame(){
-
-    }
-
     public boolean getPlaying()
     {
         return playing;
