@@ -40,8 +40,17 @@ class Hand{
         }
     }
     
-    public void showHand(){
+    public void showHand(boolean concealed){
         Iterator iterator = cards.iterator();
+        
+        //Conceals dealers first card
+        if(concealed)
+        {
+            iterator.next();
+            System.out.println("= =");
+        }
+            
+        
         while(iterator.hasNext())
         {
             Card element = (Card) iterator.next();
@@ -50,6 +59,7 @@ class Hand{
     }
     
     public void emptyHand(){
-
+        handTotal = 0;
+        cards = new ArrayList<Card>();
     }
 }
