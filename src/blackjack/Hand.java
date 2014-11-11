@@ -61,4 +61,9 @@ class Hand{
         handTotal = 0;
         cards = new ArrayList<Card>();
     }
+    
+    public int getHandTotal()
+    {
+        return handTotal;
+    }
 }

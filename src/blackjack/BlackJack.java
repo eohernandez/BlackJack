@@ -3,18 +3,14 @@ package blackjack;
 import java.util.*;
 
 /**
- *
- * @author enriqueohernandez
+ *  Blackjack game by Diego Garza, Enrique Hernandez and Marcelo Salcedo
  */
 public class BlackJack {
-
-    /**
-     * @param args the command line arguments
-     */
     
     private static Scanner in = new Scanner(System.in); //Scanner global
     
     public static void main(String[] args) {
+        
         int option;
         Game game = new Game();
         
