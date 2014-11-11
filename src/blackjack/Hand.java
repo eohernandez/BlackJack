@@ -50,7 +50,6 @@ class Hand{
             System.out.println("= =");
         }
             
-        
         while(iterator.hasNext())
         {
             Card element = (Card) iterator.next();

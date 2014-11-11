@@ -16,6 +16,16 @@ public class Player extends Character{
             score = s;
 	}
         
+        public void lose()
+        {
+            score--;
+        }
+        
+        public void win()
+        {
+            score++;
+        }
+        
         public void addToHand(Card c)
         {
             super.getHand().addToHand(c);

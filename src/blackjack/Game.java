@@ -20,8 +20,7 @@ public class Game
             
             if(playing)
             {
-                int score = player.getScore();
-                player.setScore(score--);
+                player.lose();
             }
             
             //Creates new deck and shuffles
@@ -39,12 +38,18 @@ public class Game
                 aux = deck.getNextCard();
                 dealer.addToHand(aux);
             }
+            
+            //Prints hands
             System.out.println("Tu mano:");
             player.getHand().showHand(false);
             System.out.println("Mano del Dealer:");
             dealer.getHand().showHand(true);
             
+            //Changes playing state
             playing = true;
+            
+            //Displays score
+            System.out.println("Tu puntaje es: " + player.getScore());
 	}
 
 	public void hit(){
