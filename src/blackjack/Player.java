@@ -26,8 +26,4 @@ public class Player extends Character{
             score++;
         }
         
-        public void addToHand(Card c)
-        {
-            super.getHand().addToHand(c);
-        }
 }

@@ -11,4 +11,9 @@ public class Character{
     public Hand getHand(){
         return hand;
     }
+    
+    public void addToHand(Card c)
+    {
+        hand.addToHand(c);
+    }
 }

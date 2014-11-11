@@ -4,8 +4,4 @@ public class Dealer extends Character{
     {
         
     }
-    public void addToHand(Card c)
-    {
-        super.getHand().addToHand(c);
-    }
 }
