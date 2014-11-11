@@ -11,8 +11,13 @@ public class Player extends Character{
 	public int getScore(){
             return score;
 	}
+        
 	public void setScore(int s){
             score = s;
 	}
-
+        
+        public void addToHand(Card c)
+        {
+            super.getHand().addToHand(c);
+        }
 }

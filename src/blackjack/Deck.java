@@ -2,10 +2,13 @@ package blackjack;
 import java.util.*;
 public class Deck 
 {
-        Stack cards = new Stack();
+        private Vector<Card> cards;
+        private int cont;
     
-	private void Deck()
+	public Deck()
 	{
+            cards = new Vector<Card>();
+            cont = 0;
             char [] suites = {'H', 'S', 'C', 'D'};
             char [] value = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
             
@@ -13,23 +16,26 @@ public class Deck
             {
                 for(int j=0; j<value.length; j++)
                 {
-                    cards.push(new Card(suites[i], value[j]));
+                    cards.add(new Card(suites[i],value[j]));
+                    cont++;
                 }
             }
+            cont = -1;
 	}
 
 	public void shuffle()
 	{
 
 	}
-
+        
 	public Card getNextCard()
-	{   
-            return (Card) cards.pop();
+	{
+            cont++;
+            return cards.get(cont);
 	}
 
 	public Card stand()
 	{
-            return (Card) cards.pop();
+            return cards.get(cont);
 	}
 }

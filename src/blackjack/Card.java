@@ -4,7 +4,13 @@ public class Card{
 
 	private char suite;
 	private char value;
-
+        
+        public Card()
+        {
+            suite = '-';
+            value = '-';                    
+        }
+        
         public Card(char s, char v)
         {
             suite = s;

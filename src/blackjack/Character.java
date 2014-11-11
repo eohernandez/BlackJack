@@ -5,6 +5,10 @@ public class Character{
         
     public Character()
     {
-        Hand hand = new Hand();
+        hand = new Hand();
+    }
+    
+    public Hand getHand(){
+        return hand;
     }
 }

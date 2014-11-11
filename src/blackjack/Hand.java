@@ -8,7 +8,7 @@ class Hand{
     public Hand()
     {
         handTotal = 0;
-        List<Card> cards = new ArrayList<Card>();
+        cards = new ArrayList<Card>();
     }
     
     public void addToHand(Card card){
@@ -41,7 +41,12 @@ class Hand{
     }
     
     public void showHand(){
-        
+        Iterator iterator = cards.iterator();
+        while(iterator.hasNext())
+        {
+            Card element = (Card) iterator.next();
+            System.out.println(element.getSuite()+" "+element.getValue());
+        }
     }
     
     public void emptyHand(){

@@ -3,18 +3,26 @@ package blackjack;
 public class Game 
 {
 	private Deck deck;
-	private Character player;
-	private Character dealer;
+	private Player player;
+	private Dealer dealer;
         
         public Game()
         {
-            Deck deck = new Deck();
-            Character player = new Character();
-            Character dealer = new Character();
+            deck = new Deck();
+            player = new Player();
+            dealer = new Dealer();
         }
         
 	public void deal(){
-
+            Card aux;
+            for(int i=0; i<2; i++)
+            {
+                aux = deck.getNextCard();
+                player.addToHand(aux);
+                aux = deck.getNextCard();
+                dealer.addToHand(aux);
+            }
+            player.getHand().showHand();
 	}
 
 	public void hit(){
