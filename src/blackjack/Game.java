@@ -92,6 +92,58 @@ public class Game
 
     public void stand(){
 
+        Card aux;
+        System.out.println("Tu mano:");
+        player.getHand().showHand(false);
+        System.out.println("Mano del Dealer:");
+        dealer.getHand().showHand(false);
+        while(dealer.getHand().getHandTotal()<18){
+            aux = deck.getNextCard();
+            dealer.addToHand(aux);
+            System.out.println("HitDealer");
+            System.out.println("Tu mano:");
+            player.getHand().showHand(false);
+            System.out.println("Mano del Dealer:");
+            dealer.getHand().showHand(false);
+        }
+        if(dealer.getHand().getHandTotal()<22){
+            if(player.getHand().getHandTotal()>dealer.getHand().getHandTotal()){
+                System.out.println("Ganaste!");
+                System.out.println("Tu mano:");
+                player.getHand().showHand(false);
+                System.out.println("Mano del Dealer:");
+                dealer.getHand().showHand(false);
+                player.win();
+                playing = false;
+
+                    //Displays score
+                System.out.println("Tu puntaje es: " + player.getScore());
+            }
+             else{
+                System.out.println("Lo siento perdiste!");
+                System.out.println("Tu mano:");
+                player.getHand().showHand(false);
+                System.out.println("Mano del Dealer:");
+                dealer.getHand().showHand(false);
+                player.lose();
+                playing = false;
+
+                //Displays score
+                System.out.println("Tu puntaje es: " + player.getScore());
+            }
+        }else{
+            System.out.println("Ganaste!");
+            System.out.println("Tu mano:");
+            player.getHand().showHand(false);
+            System.out.println("Mano del Dealer:");
+            dealer.getHand().showHand(false);
+            player.win();
+            playing = false;
+                
+                //Displays score
+            System.out.println("Tu puntaje es: " + player.getScore());
+        }
+        
     }
 
     public boolean getPlaying()
